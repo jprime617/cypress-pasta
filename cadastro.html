@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="style copy.css">
+    <title>Página de Cadastro</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Cadastro</h1>
-        <input type="text" placeholder="Email" id="email">
-        <input type="password" placeholder="Senha" id="senha">
+        <h1>Cadastrar</h1>
+        <p>Digite seu Nome, Email e Senha</p>
+        <form id="formulario" onsubmit="return validarFormulario()">
+            <input type="text" placeholder="Nome" id="nome" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="password" placeholder="Senha" id="senha" required>
+            <input type="password" placeholder="Confirmar Senha" id="csenha" required>
 
-        <button id="entrar" type="submit">Cadastrar</button>
+            <button id="entrar" type="submit">Cadastrar</button>
+        </form>
+        <span id="erro">As senhas estão diferentes</span>
+
+        <a href="./index.html">Fazer Login</a>
     </div>
-    
+
+    <script>
+        function validarFormulario() {
+            event.preventDefault();
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('csenha').value;
+
+            if (senha === confirmarSenha) {
+                alert('Foi');
+                return true;
+            } else {
+                document.getElementById('erro').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('erro').style.display = 'none';
+                }, 5000);
+
+                return false;
+            }
+        }
+    </script>
 </body>
+
 </html>

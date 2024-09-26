@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -11,38 +12,35 @@
     padding: 20px;
     background-color: #D0DDD7;
     border-radius: 15px;
-    box-shadow: 10px 10px 10px  gray;
+    box-shadow: 10px 10px 10px gray;
     width: 300px;
     background-color: rgba(208, 221, 215, 0.8);
-
 }
 
-
-body{
+body {
     width: 100%;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(https://i.pinimg.com/originals/f9/bb/56/f9bb56d16bc7a40ccb9508ffbf38290d.jpg);
+    background-image: url(https://wallpapercat.com/w/full/4/6/0/34209-3065x1909-desktop-hd-the-lord-of-the-rings-background-image.jpg);
     background-size: cover;
 }
 
-#formulario{
+#formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-input{
+input {
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
     border: 1px solid gray;
 }
 
-#entrar{
+#entrar {
     background-color: aqua;
     padding: 10px 15px;
     margin: 5px;
@@ -50,7 +48,7 @@ input{
     border: none;
 }
 
-#erro{
+#erro {
     color: red;
     display: none;
 }
